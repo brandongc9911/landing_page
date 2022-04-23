@@ -69,8 +69,17 @@ img{
 }
 
 .header{
+    background-image: url('/images/bg-hero-mobile.svg');
     background-color: var(--paleCyan);
     height: 85rem;
+}
+
+@media (min-width:768px ) {
+    .header{
+        background-image: url('/images/bg-hero-desktop.svg');
+
+    }
+   
 }
 
 .barra{
@@ -89,6 +98,8 @@ img{
 #barra__logo{
     width: 15rem;
 }
+
+
 
 .boton{
     font-family: var(--fontHeading);
@@ -160,12 +171,33 @@ img{
 .card{
     height: 50rem;
     box-shadow: -4px -5px 55px 2px rgba(240,240,240,1);
-    margin:  2rem auto 20rem  auto;
+    margin-top: 4.5rem;
     border: none;
     border-radius: 1rem;
-    padding: 2.5rem 0;
+    padding: 3rem 0;
     
     
+}
+
+@media (min-width: 768px) {
+   .card{
+       height: 35rem;
+       display: grid;
+       grid-template-columns: 2fr 1.5fr;
+       grid-template-areas: 'description img';
+       gap: 10rem;
+       
+   }
+
+   .description{
+       margin-left: 2rem;
+       text-align: left;
+       grid-area: description;
+   }
+
+   .description h2{
+       margin-left: 2rem;
+   }
 }
 
 .card p{
@@ -179,20 +211,171 @@ img{
     
 }
 
+@media (min-width: 768px) {
+    .card img{
+        grid-area: img;
+        width: 35rem;
+    }
+}
+
+
+.card:last-of-type{
+    margin-bottom: 12rem;
+}
+
 
 
 .footer{
+ 
     background-color: var(--darkCyan);
-    height: 25rem;
+    position: relative;
+    color: white;
     
 }
 
-.footer .community{
+.community{
+    height: 17rem;
+    color: black;
+    position: absolute;
     background-color: white;
-    box-shadow: -4px -5px 55px 2px rgba(240,240,240,1);
-    /* margin-top: 10rem; */
-    padding: 2rem 0;
+    box-shadow: -4px -0px 0px 0px rgba(240,240,240,1);
     border-radius: 3rem;
-    margin: -20rem  auto 0 auto;
+    margin-top: -5rem;
+    z-index: 1;
+    
+    
 }
 
+
+/* @media (min-width: 768px) {
+   .community{
+      
+       
+       
+   }
+} */
+
+.footer__information{
+    padding-top: 10rem;
+}
+
+
+@media (min-width: 768px) {
+    .footer__information{
+        padding-top: 15rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'contact more redes';
+        gap: 10rem;
+    }
+}
+
+
+.ubication{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.ubication  img{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 2rem;
+}
+.ubication p{
+    padding-left: 1rem;
+}
+
+.phone{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.phone img{
+    margin-right: 2rem;
+}
+
+.e-mail{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.e-mail img{
+    margin-right: 2rem;
+}
+
+.more{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .more{
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+   
+}
+.more a{
+    color: white;
+    text-decoration: none;
+}
+
+.redes{
+    grid-area: redes;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    height: 8rem;
+    
+}
+
+.redes > div{
+    margin-right: 2rem;
+    text-align: center;
+    
+}
+
+.redes > div > img{
+    margin-top: 1.2rem;
+}
+
+
+
+
+
+.fb{
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid white;
+    border-radius: 5rem;
+}
+
+
+
+.twitter{
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid white;
+    border-radius: 5rem;
+}
+
+.instagram{
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid white;
+    border-radius: 5rem;
+}
+
+@media (min-width: 768px) {
+   .copy{
+       display: flex;
+       grid-area: redes;
+       padding-top: 30rem;
+       
+   }
+}
